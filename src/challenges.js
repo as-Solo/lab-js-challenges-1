@@ -13,32 +13,74 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsArray, searchedWord) {
+  let sumWord = 0;
+  
+  for (let i=0; i<wordsArray.length; i++){
+    if (wordsArray[i] === searchedWord){
+      sumWord++;
+    }
+  }
+  return (sumWord);
+}
 
+// console.log(howManyTimes(repeatedWords, 'matter'))
+// console.log(howManyTimes(repeatedWords, 'machine'))
 
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+function createSequence(number) {
+  if (number === 0){
+    return ([]);
+  }
+  let numberArray = [];
+  for (let i=0; i <= number; i++){
+    numberArray.push(i);
+  }
+  return (numberArray);
+}
 
+// console.log(createSequence(7));
+// console.log(createSequence(1));
+// console.log(createSequence(3));
+// console.log(createSequence(0));
 
 
 
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(numArray, mult) {
+  let numMultArray = [];
+  for (let i = 0; i < numArray.length; i++){
+    numMultArray.push(numArray[i] * mult);
+  }
+  return(numMultArray);
+}
 
-
+// console.log(multiplyBy(numbers, 3));
+// console.log(multiplyBy(numbers, 6));
 
 
 // Iteration 4 | Filter Out
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(originalArray, removeArray) {
+  if (originalArray.length === 0){
+    return (null);
+  }
+  let filteredArray = [];
+  for (let i=0; i < originalArray.length; i++){
+    if(removeArray.indexOf(originalArray[i]) === -1){
+      filteredArray.push(originalArray[i]);
+    }
+  }
+  return(filteredArray)
+}
 
-
+console.log(filterOut(original, toRemove));
 
 
 // Iteration 5 | Unique Arrays
@@ -56,8 +98,20 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordArray) {
+  if (wordArray.length === 0){
+    return (null);
+  }
+  let uniqueArray = [];
 
+  for (let i = 0; i<wordArray.length; i++){
+    console.log(uniqueArray.includes(wordArray[i]))
+    if (!uniqueArray.includes(wordArray[i])){
+      uniqueArray.push(wordArray[i]);
+    }
+  }
+  return (uniqueArray);
+}
 
 
 
