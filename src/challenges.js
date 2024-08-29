@@ -105,7 +105,7 @@ function uniquifyArray(wordArray) {
   let uniqueArray = [];
 
   for (let i = 0; i<wordArray.length; i++){
-    console.log(uniqueArray.includes(wordArray[i]))
+    // console.log(uniqueArray.includes(wordArray[i]))
     if (!uniqueArray.includes(wordArray[i])){
       uniqueArray.push(wordArray[i]);
     }
@@ -139,4 +139,55 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  let resultadoMaximo = matrix[0][0];
+
+  for(let j=0; j <matrix.length; j++){
+    for (let i=0; i<(matrix[j].length - 3); i++){
+      const compare = (matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]);
+      console.log("compare es "+compare+ " resultado es " +resultadoMaximo)
+      if (resultadoMaximo < compare){
+        resultadoMaximo = compare;
+      }
+    }
+  }
+
+  for(let j=0; j <matrix[0].length; j++){
+    for (let i=0; i<(matrix[i][j].length - 3); i++){
+      const compare = (matrix[i][j] * matrix[i][j+1] * matrix[i][j+2] * matrix[i][j+3]);
+      console.log("compare es "+compare+ " resultado es " +resultadoMaximo)
+      if (resultadoMaximo < compare){
+        resultadoMaximo = compare;
+      }
+    }
+  }
+   
+    return (resultadoMaximo)
+}
+
+
+
+// for (let i=0; i<matrix.length;i++){
+  //   for(let j=3; j<matrix[i].length; j++){
+    //     sum = matrix[i][j] * matrix[i][j-1] * matrix[i][j-2] * matrix[i][j-3]
+    //   }
+    // }
+
+// let linea = [10000, 3, 5, 67, 10, 30]
+// let sum = linea[0];
+// for (let i=0; i<(linea.length - 3); i++){
+//   const compare = (linea[i] * linea[i+1] * linea[i+2] * linea[i+3]);
+//   if (sum < compare){
+//     sum = compare;
+//   }
+// }
+
+// console.log(sum);
+
+let miniMatrix = [[ 1,  2, 3, 4, 5, 7, 8],
+                  [ 1, 20, 3, 4, 5, 7, 8],
+                  [ 1, 20, 3, 4, 5, 7, 8],
+                  [ 1, 20, 3, 4, 5, 7, 7],
+                  [ 1,  4, 3, 4, 5, 7, 7]]
+
+console.log("el valor de esto es " + greatestProduct(miniMatrix));
