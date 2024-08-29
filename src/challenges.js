@@ -184,10 +184,10 @@ function greatestProduct(matrix) {
 
 // console.log(sum);
 
-let miniMatrix = [[ 1,  2, 3, 4, 5, 7, 8],
-                  [ 1, 20, 3, 4, 5, 7, 8],
-                  [ 1, 20, 3, 4, 5, 7, 8],
-                  [ 1, 20, 3, 4, 5, 7, 7],
-                  [ 1,  4, 3, 4, 5, 7, 7]]
+// let miniMatrix = [[ 1,  2, 3, 4, 5, 7, 8],
+//                   [ 1, 20, 3, 4, 5, 7, 8],
+//                   [ 1, 20, 3, 4, 5, 7, 8],
+//                   [ 1, 20, 3, 4, 5, 7, 7],
+//                   [ 1,  4, 3, 4, 5, 7, 7]]
 
-console.log("el valor de esto es " + greatestProduct(miniMatrix));
+// console.log("el valor de esto es " + greatestProduct(miniMatrix));
