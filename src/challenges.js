@@ -24,6 +24,7 @@ function howManyTimes(wordsArray, searchedWord) {
   return (sumWord);
 }
 
+// //----------------------Comprobacion How Many
 // console.log(howManyTimes(repeatedWords, 'matter'))
 // console.log(howManyTimes(repeatedWords, 'machine'))
 
@@ -41,6 +42,7 @@ function createSequence(number) {
   return (numberArray);
 }
 
+// //----------------------Comprobacion Number Sequence
 // console.log(createSequence(7));
 // console.log(createSequence(1));
 // console.log(createSequence(3));
@@ -59,6 +61,7 @@ function multiplyBy(numArray, mult) {
   return(numMultArray);
 }
 
+// //--------------------Comprobacion Multiply
 // console.log(multiplyBy(numbers, 3));
 // console.log(multiplyBy(numbers, 6));
 
@@ -80,7 +83,8 @@ function filterOut(originalArray, removeArray) {
   return(filteredArray)
 }
 
-console.log(filterOut(original, toRemove));
+// //--------------------Comprobacion fiterOut
+// console.log(filterOut(original, toRemove));
 
 
 // Iteration 5 | Unique Arrays
@@ -145,7 +149,6 @@ function greatestProduct(matrix) {
   for(let j=0; j <matrix.length; j++){
     for (let i=0; i<(matrix[j].length - 3); i++){
       const compare = (matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]);
-      console.log("compare es "+compare+ " resultado es " +resultadoMaximo)
       if (resultadoMaximo < compare){
         resultadoMaximo = compare;
       }
@@ -153,9 +156,8 @@ function greatestProduct(matrix) {
   }
 
   for(let j=0; j <matrix[0].length; j++){
-    for (let i=0; i<(matrix[i][j].length - 3); i++){
-      const compare = (matrix[i][j] * matrix[i][j+1] * matrix[i][j+2] * matrix[i][j+3]);
-      console.log("compare es "+compare+ " resultado es " +resultadoMaximo)
+    for (let i = 0; i < matrix.length -3; i++){
+      const compare = (matrix[i][j] * matrix[i+1][j] * matrix[i+2][j] * matrix[i+3][j]);
       if (resultadoMaximo < compare){
         resultadoMaximo = compare;
       }
@@ -165,29 +167,12 @@ function greatestProduct(matrix) {
     return (resultadoMaximo)
 }
 
-
-
-// for (let i=0; i<matrix.length;i++){
-  //   for(let j=3; j<matrix[i].length; j++){
-    //     sum = matrix[i][j] * matrix[i][j-1] * matrix[i][j-2] * matrix[i][j-3]
-    //   }
-    // }
-
-// let linea = [10000, 3, 5, 67, 10, 30]
-// let sum = linea[0];
-// for (let i=0; i<(linea.length - 3); i++){
-//   const compare = (linea[i] * linea[i+1] * linea[i+2] * linea[i+3]);
-//   if (sum < compare){
-//     sum = compare;
-//   }
-// }
-
-// console.log(sum);
-
-// let miniMatrix = [[ 1,  2, 3, 4, 5, 7, 8],
-//                   [ 1, 20, 3, 4, 5, 7, 8],
-//                   [ 1, 20, 3, 4, 5, 7, 8],
-//                   [ 1, 20, 3, 4, 5, 7, 7],
-//                   [ 1,  4, 3, 4, 5, 7, 7]]
+// //------------------------COMPROBACIONES MATRIX---------------------------------
+// let miniMatrix = [[ 1,  2, 3, 4, 5],
+// [ 1, 20, 3, 4, 5],
+// [ 1, 20, 3, 4, 5],
+// [ 1, 20, 3, 4, 5],
+// [ 1,  4, 3, 4, 5]]
 
 // console.log("el valor de esto es " + greatestProduct(miniMatrix));
+// //-------------------------------------------------------------------------------
