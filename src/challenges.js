@@ -176,3 +176,14 @@ function greatestProduct(matrix) {
 
 // console.log("el valor de esto es " + greatestProduct(miniMatrix));
 // //-------------------------------------------------------------------------------
+
+let matrix2 = [
+  [1,1,1,1,1,1,1],
+  [1,1,1,1,1,1,1],
+  [1,1,1,1,1,1,1],
+  [1,1,1,1,1,1,1],
+  [1,1,1,1,1,1,1],
+  [1,1,1,1,1,9,9],
+  [1,1,1,1,1,9,9],
+]
+console.log(greatestProduct(matrix2))
